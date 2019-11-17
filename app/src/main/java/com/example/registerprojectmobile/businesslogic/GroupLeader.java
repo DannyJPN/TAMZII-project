@@ -1,7 +1,7 @@
 ﻿package com.example.registerprojectmobile.businesslogic;
-   public class GroupLeader:Person
+   public class GroupLeader extends Person
     {
-        public uint ID { get; set; }
+        public uint ID ;public uint getID(){return ID} public void setID(uint value){ID = value}
 
     }
 

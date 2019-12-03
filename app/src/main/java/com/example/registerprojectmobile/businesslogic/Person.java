@@ -1,13 +1,13 @@
 ﻿package com.example.registerprojectmobile.businesslogic;
     public abstract class Person
     {
-        public string Name ;public string getName(){return Name} public void setName(string value){Name = value}
-        public string Surname ;public string getSurname(){return Surname} public void setSurname(string value){Surname = value}
-        public uint Phone ;public uint getPhone(){return Phone} public void setPhone(uint value){Phone = value}
-        public string Email ;public string getEmail(){return Email} public void setEmail(string value){Email = value}
+        public String Name ;public String getName(){return Name;} public void setName(String value){Name = value;}
+        public String Surname ;public String getSurname(){return Surname;} public void setSurname(String value){Surname = value;}
+        public int Phone ;public int getPhone(){return Phone;} public void setPhone(int value){Phone = value;}
+        public String Email ;public String getEmail(){return Email;} public void setEmail(String value){Email = value;}
 
 
 
 
-    }
+    ;}
 

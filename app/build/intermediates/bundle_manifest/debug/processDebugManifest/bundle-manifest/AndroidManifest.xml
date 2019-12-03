@@ -17,6 +17,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.example.registerprojectmobile.ChildListActivity" />
+        <activity android:name="com.example.registerprojectmobile.RegisterToGroupActivity" />
+        <activity android:name="com.example.registerprojectmobile.RegisterActivity" />
         <activity android:name="com.example.registerprojectmobile.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

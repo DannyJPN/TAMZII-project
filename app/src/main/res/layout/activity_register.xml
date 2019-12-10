@@ -1,9 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RegisterActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView android:id="@+id/tv_childname"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"        android:text="@string/tv_childname"                        />
+            <EditText android:id="@+id/tb_childname"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                                />
+            <TextView android:id="@+id/tv_childsurname"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"        android:text="@string/tv_childsurname"                      />
+            <EditText android:id="@+id/tb_childsurname"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                     />
+            <TextView android:id="@+id/tv_schoolname"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"        android:text="@string/tv_schoolname"                         />
+            <EditText android:id="@+id/tb_schoolname"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                        />
+            <TextView android:id="@+id/tv_regnum"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"        android:text="@string/tv_regnum"                            />
+            <EditText android:id="@+id/tb_regnum"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                        />
+            <TextView android:id="@+id/tv_street"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"        android:text="@string/tv_street"                             />
+            <EditText android:id="@+id/tb_street"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                         />
+            <TextView android:id="@+id/tv_orientnum              "           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"        android:text="@string/tv_orientnum"                           />
+        <EditText android:id="@+id/tb_orientnum"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"        />
+            <TextView android:id="@+id/tv_descriptnum"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"        android:text="@string/tv_descriptnum"                        />
+            <EditText android:id="@+id/tb_descriptnum"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                    />
+            <TextView android:id="@+id/tv_city"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"        android:text="@string/tv_city"                               />
+            <EditText android:id="@+id/tb_city"            android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                           />
+            <TextView android:id="@+id/tv_citypart"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"        android:text="@string/tv_citypart"                           />
+            <EditText android:id="@+id/tb_citypart"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                          />
+            <TextView android:id="@+id/tv_healthstate"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"        android:text="@string/tv_healthstate"                        />
+            <EditText android:id="@+id/tb_healthstate"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                       />
+            <TextView android:id="@+id/tv_comments"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"        android:text="@string/tv_comments"                           />
+            <EditText android:id="@+id/tb_comments"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                          />
+            <TextView android:id="@+id/tv_postalcode"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"        android:text="@string/tv_postalcode"                         />
+            <EditText android:id="@+id/tb_postalcode"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                        />
+            <TextView android:id="@+id/tv_mothername"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"        android:text="@string/tv_mothername"                         />
+            <EditText android:id="@+id/tb_mothername"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                        />
+            <TextView android:id="@+id/tv_mothersurname"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"        android:text="@string/tv_mothersurname"                      />
+            <EditText android:id="@+id/tb_mothersurname"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                     />
+            <TextView android:id="@+id/tv_motherjob"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"        android:text="@string/tv_motherjob"                          />
+            <EditText android:id="@+id/tb_motherjob"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                         />
+            <TextView android:id="@+id/tv_motheremail"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"        android:text="@string/tv_motheremail"                        />
+            <EditText android:id="@+id/tb_motheremail"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                       />
+            <TextView android:id="@+id/tv_motherphone"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"        android:text="@string/tv_motherphone"                        />
+            <EditText android:id="@+id/tb_motherphone"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                       />
+            <TextView android:id="@+id/tv_fathername"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"        android:text="@string/tv_fathername"                         />
+            <EditText android:id="@+id/tb_fathername"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                        />
+            <TextView android:id="@+id/tv_fathersurname"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"        android:text="@string/tv_fathersurname"                      />
+            <EditText android:id="@+id/tb_fathersurname"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                     />
+            <TextView android:id="@+id/tv_fatherjob"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"        android:text="@string/tv_fatherjob"                          />
+            <EditText android:id="@+id/tb_fatherjob"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                         />
+            <TextView android:id="@+id/tv_fatheremail"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"        android:text="@string/tv_fatheremail"                        />
+            <EditText android:id="@+id/tb_fatheremail"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                       />
+            <TextView android:id="@+id/tv_fatherphone"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"        android:text="@string/tv_fatherphone"                        />
+            <EditText android:id="@+id/tb_fatherphone"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                       />
+            <TextView android:id="@+id/tv_birthdate"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"        android:text="@string/tv_birthdate"                         />
+            <DatePicker android:id="@+id/dp_birthdate"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                      />
+            <TextView android:id="@+id/tv_childemail"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"        android:text="@string/tv_childemail"                         />
+            <EditText android:id="@+id/tb_childemail"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                        />
+            <TextView android:id="@+id/tv_childphone"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"        android:text="@string/tv_childphone"                         />
+            <EditText android:id="@+id/tb_childphone"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                        />
+            <TextView android:id="@+id/tv_photoagree"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"        android:text="@string/tv_photoagree"                         />
+            <CheckBox android:id="@+id/chb_photoagree"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                       />
+            <TextView android:id="@+id/tv_insurcompany"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"        android:text="@string/tv_insurcompany"                       />
+            <EditText android:id="@+id/tb_insurcompany"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                      />
+            <TextView android:id="@+id/tv_gpdragree"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"        android:text="@string/tv_gpdragree"                          />
+            <CheckBox android:id="@+id/chb_gpdragree"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                        />
+            <TextView android:id="@+id/tv_newsletteragree"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"        android:text="@string/tv_newsletteragree"                    />
+            <CheckBox android:id="@+id/chb_newsletteragree"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                  />
+            <TextView android:id="@+id/tv_leavingalone"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"        android:text="@string/tv_leavingalone"                       />
+            <CheckBox android:id="@+id/chb_leavingalone"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                     />
+
+
+        </LinearLayout>
+
+</ScrollView>

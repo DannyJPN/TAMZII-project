@@ -1,3 +1,36 @@
 <resources>
     <string name="app_name">RegisterProjectMobile</string>
+    <string name="regbuttontext">Registrovat nové dídtě</string>
+    <string name="addbuttontext">Zápis do kroužků</string>
+    <string name="searchbuttontext">Vyhledat děti</string>
+    <string name="tv_childname">Jméno dítěte</string>
+    <string name="tv_childsurname">Příjmení dítěte</string>
+    <string name="tv_schoolname">Název školy</string>
+    <string name="tv_regnum">Registrační číslo</string>
+    <string name="tv_street">Ulice</string>
+    <string name="tv_orientnum">Číslo orientační</string>
+    <string name="tv_descriptnum">Číslo popisné</string>
+    <string name="tv_city">Město</string>
+    <string name="tv_citypart">Část města (existuje-li)</string>
+    <string name="tv_healthstate">Zdravotní stav</string>
+    <string name="tv_comments">Vaše připomínky pro nás</string>
+    <string name="tv_postalcode">PSČ</string>
+    <string name="tv_mothername">Jméno matky</string>
+    <string name="tv_mothersurname">Příjmení matky</string>
+    <string name="tv_motherjob">Zaměstnání matky</string>
+    <string name="tv_motheremail">Email matky</string>
+    <string name="tv_motherphone">Telefon matky</string>
+    <string name="tv_fathername">Jméno otce</string>
+    <string name="tv_fathersurname">Příjmení otce</string>
+    <string name="tv_fatherjob">Zaměstnání otce</string>
+    <string name="tv_fatheremail">Email otce</string>
+    <string name="tv_fatherphone">Telefon otce</string>
+    <string name="tv_birthdate">Datum narození dítěte</string>
+    <string name="tv_childemail">Email dítěte</string>
+    <string name="tv_childphone">Telefon dítěte</string>
+    <string name="tv_photoagree">Souhlas s focením na akcích</string>
+    <string name="tv_insurcompany">Číslo pojišťovny</string>
+    <string name="tv_gpdragree">Souhlas s GPDR</string>
+    <string name="tv_newsletteragree">Souhlas se zasíláním newsletterů</string>
+    <string name="tv_leavingalone">Odchody bez doprovodu</string>
 </resources>

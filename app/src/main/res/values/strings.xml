@@ -34,4 +34,5 @@
     <string name="tv_newsletteragree">Souhlas se zasíláním newsletterů</string>
     <string name="tv_leavingalone">Odchody bez doprovodu</string>
     <string name="tv_address">Adresa</string>
+    <string name="b_savetext">Uložit</string>
 </resources>

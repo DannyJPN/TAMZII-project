@@ -16,7 +16,7 @@ private String Email;
 private int Phone;
 private Boolean LeavingWithoutParents;
 private int InsuranceNumber;
-
+private int GroupID;
     public String getName(){ return Name;}
     public String getSurname(){ return Surname;}
     public Date getBirthDate(){ return BirthDate;}
@@ -28,19 +28,20 @@ private int InsuranceNumber;
     public int getPhone(){ return Phone;}
     public Boolean getLeavingWithoutParents(){ return LeavingWithoutParents;}
     public int getInsuranceNumber(){ return InsuranceNumber;}
+    public int getGroupID(){return GroupID;}
 
-    public String setName(){ return Name;}
-    public String setSurname(){ return Surname;}
-    public Date setBirthDate(){ return BirthDate;}
-    public int setRegNum(){ return RegNum;}
-    public String setAddress(){ return Address;}
-    public String setHealthState(){ return HealthState;}
-    public String setComments(){ return Comments;}
-    public String setEmail(){ return Email;}
-    public int setPhone(){ return Phone;}
-    public Boolean setLeavingWithoutParents(){ return LeavingWithoutParents;}
-    public int setInsuranceNumber(){ return InsuranceNumber;}
-
+    public  void setName(String  name){Name =name ;}
+    public  void setSurname(String surname){ Surname=surname ;}
+    public  void setBirthDate(Date birthDate){ BirthDate=birthDate ;}
+    public  void setRegNum(int regNum){ RegNum= regNum;}
+    public  void setAddress(String address){ Address=address ;}
+    public  void setHealthState(String healthState){ HealthState=healthState ;}
+    public  void setComments(String comments){ Comments=comments ;}
+    public  void setEmail(String email){ Email=email ;}
+    public  void setPhone(int phone){ Phone=phone ;}
+    public  void setLeavingWithoutParents(Boolean leavingWithoutParents){LeavingWithoutParents =leavingWithoutParents ;}
+    public  void setInsuranceNumber(int insuranceNumber){ InsuranceNumber= insuranceNumber;}
+    public void setGroupID(int groupID){GroupID=groupID;}
 
 
 }

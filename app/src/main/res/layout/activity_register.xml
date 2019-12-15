@@ -19,8 +19,8 @@
             <EditText android:id="@+id/tb_childsurname"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                     />
             <TextView android:id="@+id/tv_regnum"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"        android:text="@string/tv_regnum"                            />
             <EditText android:id="@+id/tb_regnum"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                        />
-            <EditText android:id="@+id/tb_address"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                         />
             <TextView android:id="@+id/tv_address"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"        android:text="@string/tv_address"                             />
+            <EditText android:id="@+id/tb_address"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                         />
             <TextView android:id="@+id/tv_healthstate"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"        android:text="@string/tv_healthstate"                        />
             <EditText android:id="@+id/tb_healthstate"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                       />
             <TextView android:id="@+id/tv_comments"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"        android:text="@string/tv_comments"                           />
@@ -32,9 +32,10 @@
             <TextView android:id="@+id/tv_childphone"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"        android:text="@string/tv_childphone"                         />
             <EditText android:id="@+id/tb_childphone"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                        />
             <TextView android:id="@+id/tv_insurcompany"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"        android:text="@string/tv_insurcompany"                       />
-            <EditText android:id="@+id/tb_insurcompany"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                      />
+            <EditText android:id="@+id/tb_insurcompany"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                         />
             <TextView android:id="@+id/tv_leavingalone"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"        android:text="@string/tv_leavingalone"                       />
             <CheckBox android:id="@+id/chb_leavingalone"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                     />
+            <Button android:id="@+id/btn_save"           android:layout_width="match_parent"        android:layout_height="wrap_content"        android:layout_weight="1"                     android:text="@string/b_savetext"/>
 
 
         </LinearLayout>

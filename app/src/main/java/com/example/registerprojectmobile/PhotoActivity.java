@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import android.provider.BaseColumns;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 
 import java.io.ByteArrayOutputStream;
@@ -57,22 +59,20 @@ public class PhotoActivity extends AppCompatActivity {
     private void GetGroupID() {
         SQLmanager regman = new SQLmanager(getApplicationContext());
         SQLiteDatabase db=regman.getReadableDatabase();
-// Define a projection that specifies which columns from the database
-// you will actually use after this query.
+
         String[] projection = {
                 BaseColumns._ID,
                 SQLmanagerContract.GroupEntry.COLUMN_NAME_NAME
 
         };
 
-// Filter results WHERE "title" = 'My Title'
         String selection = SQLmanagerContract.GroupEntry.COLUMN_NAME_NAME + " = ?";
-        EditText groupname = (EditText)find
-        String[] selectionArgs = { "My Title" };
+        EditText groupname = (EditText)findViewById(R.id.tb_groupname);
+        String[] selectionArgs = { groupname.getText().toString()};
 
 
         Cursor cursor = db.query(
-                FeedEntry.TABLE_NAME,   // The table to query
+                SQLmanagerContract.GroupEntry.TABLE_NAME,   // The table to query
                 projection,             // The array of columns to return (pass null to get all)
                 selection,              // The columns for the WHERE clause
                 selectionArgs,          // The values for the WHERE clause
@@ -80,7 +80,17 @@ public class PhotoActivity extends AppCompatActivity {
                 null,                   // don't filter by row groups
                null              // The sort order
         );
+        if(cursor==null||cursor.getCount()<=0)
+        {
+            regchild.setGroupID(0);
+        }
+        else
+        {
+            cursor.moveToNext();
+            int groupid = cursor.getInt(cursor.getColumnIndexOrThrow(SQLmanagerContract.GroupEntry._ID));
+            regchild.setGroupID(groupid);
 
+        }
 
     }
 

@@ -46,7 +46,7 @@ public class RegisterActivity extends AppCompatActivity {
                 Intent photoact = new Intent(getApplicationContext(), PhotoActivity.class);
                 photoact.putExtra("Name",Name);
                 photoact.putExtra("Surname",Surname);
-                photoact.putExtra("BirthDate",BirthDate);
+                photoact.putExtra("BirthDate",BirthDate.toString());
                 photoact.putExtra("RegNum",RegNum);
                 photoact.putExtra("InsuranceNumber",InsuranceNumber);
                 photoact.putExtra("OriginActivity","Register");

@@ -13,7 +13,7 @@ public class Group {
         Name=name;
 
     }
-    public int getID(){return ID;}
+   public int getID(){return ID;}
     public String getName(){return Name;}
     public ArrayList<Child> getMembers(){return Members;}
 

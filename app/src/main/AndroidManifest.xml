@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.registerprojectmobile">
+    <uses-feature android:name="android.hardware.camera"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -12,7 +14,7 @@
         <activity android:name=".PhotoActivity"></activity>
         <activity android:name=".RegisterActivity" />
         <activity android:name=".ChildListActivity" />
-        <activity android:name=".RegisterToGroupActivity" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

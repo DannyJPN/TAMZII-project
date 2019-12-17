@@ -12,7 +12,7 @@ public final class SQLmanagerContract {
     /* Inner class that defines the table contents */
     public static class ChildEntry implements BaseColumns {
         public static final String TABLE_NAME = "Children";
-        public static final String COLUMN_NAME_ID = "ID";
+       // public static final String COLUMN_NAME_ID = "ID";
 
         public static final String COLUMN_NAME_NAME = "Name";
         public static final String COLUMN_NAME_SURNAME = "Surname";
@@ -27,7 +27,7 @@ public final class SQLmanagerContract {
 
     public static class GroupEntry implements BaseColumns {
         public static final String TABLE_NAME = "Groups";
-        public static final String COLUMN_NAME_ID = "ID";
+   //     public static final String COLUMN_NAME_ID = "ID";
 
         public static final String COLUMN_NAME_NAME = "Name";
     }

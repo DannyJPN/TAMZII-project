@@ -35,4 +35,5 @@
     <string name="tv_leavingalone">Odchody bez doprovodu</string>
     <string name="tv_address">Adresa</string>
     <string name="b_savetext">Uložit</string>
+    <string name="tv_groupname">Název kroužku</string>
 </resources>

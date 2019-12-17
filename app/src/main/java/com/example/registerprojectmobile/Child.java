@@ -7,15 +7,15 @@ import java.util.Date;
 public class Child 
 {
 
-private String Name;
-private String Surname;
-private Date BirthDate;
-private int RegNum;
+private String Name="";
+private String Surname="";
+private Date BirthDate=new Date();
+private int RegNum=0;
 
-private int InsuranceNumber;
-private int GroupID;
-private int ID;
-private Bitmap Photo;
+private int InsuranceNumber=0;
+private int GroupID=0;
+private int ID=0;
+private Bitmap Photo=null;
 
     public String getName(){ return Name;}
     public String getSurname(){ return Surname;}

@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button regbutton =    (Button) findViewById(R.id.registerbutton);
-        Button addbutton =    (Button)findViewById(R.id.addtogroupbutton);
+
         Button searchbutton = (Button)findViewById(R.id.searchchildbutton);
 
         regbutton.setOnClickListener(new View.OnClickListener() {
@@ -29,16 +29,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(reg);
             }
         });
-        addbutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent reg = new Intent(getApplicationContext(),RegisterToGroupActivity.class);
-                reg.putExtra("OriginActivity","Main");
-                reg.putExtra("DefaultChild" ,"None");
 
-                startActivity(reg);
-            }
-        });
         regbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

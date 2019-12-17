@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ChildListActivity"></activity>
-        <activity android:name=".RegisterToGroupActivity" />
+        <activity android:name=".PhotoActivity"></activity>
         <activity android:name=".RegisterActivity" />
+        <activity android:name=".ChildListActivity" />
+        <activity android:name=".RegisterToGroupActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

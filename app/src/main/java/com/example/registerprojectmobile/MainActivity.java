@@ -30,10 +30,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        regbutton.setOnClickListener(new View.OnClickListener() {
+        searchbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent reg = new Intent(getApplicationContext(),ChildListActivity.class);
+                Intent reg = new Intent(getApplicationContext(),ChildSearchActivity.class);
                 reg.putExtra("OriginActivity","Main");
                 startActivity(reg);
             }

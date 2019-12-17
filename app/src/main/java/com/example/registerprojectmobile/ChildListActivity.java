@@ -3,7 +3,11 @@ package com.example.registerprojectmobile;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.provider.BaseColumns;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -20,15 +24,16 @@ public class ChildListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_child_list);
 
-        Button childsearcher = (Button)findViewById(R.id.btn_childsearch);
-        childsearcher.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                    Search();
-            }
-        });
+        Intent searchdata = getIntent();
+        if(searchdata.getExtras().getString("OriginActivity") == "ChildSearch")
+        {
+            String name = searchdata.getExtras().getString("NameToSearch");
+            String surname = searchdata.getExtras().getString("SurnameToSearch");
+
+            Search(name,surname);
 
 
+        }
 
 
 
@@ -36,21 +41,53 @@ public class ChildListActivity extends AppCompatActivity {
 
     }
 
-    private void Search() {
+    private void Search(String name,String surname) {
 
-  /*      final List<String> lisviewstrings = new ArrayList<>();
-        for (int i = 0; i < sokolevels.size(); i++) {
-            lisviewstrings.add("level " + String.valueOf(i));
+  SQLmanager regman = new SQLmanager(          getApplicationContext()  );
+        SQLiteDatabase db = regman.getReadableDatabase();
+        String[] projection = {
+                BaseColumns._ID,
+                SQLmanagerContract.ChildEntry.COLUMN_NAME_NAME,
+                SQLmanagerContract.ChildEntry.COLUMN_NAME_SURNAME,
+                SQLmanagerContract.ChildEntry.COLUMN_NAME_BIRTHDATE,
+                SQLmanagerContract.ChildEntry.COLUMN_NAME_REGNUM,
+                SQLmanagerContract.ChildEntry.COLUMN_NAME_PHOTO,
+                SQLmanagerContract.ChildEntry.COLUMN_NAME_GROUPID,
+                SQLmanagerContract.ChildEntry.COLUMN_NAME_INSURANCENUMBER
+
+
+        };
+
+        String selection = SQLmanagerContract.ChildEntry.COLUMN_NAME_NAME + " = ? and "+SQLmanagerContract.ChildEntry.COLUMN_NAME_SURNAME + " = ?";
+        String[] selectionArgs = {name,surname };
+        Cursor cursor = db.query(
+                SQLmanagerContract.GroupEntry.TABLE_NAME,   // The table to query
+                projection,             // The array of columns to return (pass null to get all)
+                selection,              // The columns for the WHERE clause
+                selectionArgs,          // The values for the WHERE clause
+                null,                   // don't group the rows
+                null,                   // don't filter by row groups
+                null              // The sort order
+        );
+
+
+
+    }
+
+    private void FillList(List<Child>children)
+    {
+              final List<String> lisviewstrings = new ArrayList<>();
+        for (int i = 0; i < children.size(); i++) {
+            lisviewstrings.add(children.get(i).getName()+" " + children.get(i).getSurname());
 
         }
         ListView listview = (ListView) findViewById(R.id.listview);
         final StableArrayAdapter adapter = new StableArrayAdapter(this,
                 android.R.layout.simple_list_item_1, lisviewstrings);
         listview.setAdapter(adapter);
-*/
+
 
     }
-
 
     private class StableArrayAdapter extends ArrayAdapter<String> {
 

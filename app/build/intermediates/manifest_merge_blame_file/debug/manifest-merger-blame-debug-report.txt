@@ -32,32 +32,31 @@
 21-->C:\Users\Dan Krupa\Dropbox\UNI\VSB\VSB\BC_IVT_III\S5\TAMZII\Project\app\src\main\AndroidManifest.xml:11:9-54
 22        android:supportsRtl="true"
 22-->C:\Users\Dan Krupa\Dropbox\UNI\VSB\VSB\BC_IVT_III\S5\TAMZII\Project\app\src\main\AndroidManifest.xml:12:9-35
-23        android:testOnly="true"
-24        android:theme="@style/AppTheme" >
-24-->C:\Users\Dan Krupa\Dropbox\UNI\VSB\VSB\BC_IVT_III\S5\TAMZII\Project\app\src\main\AndroidManifest.xml:13:9-40
-25        <activity android:name="com.example.registerprojectmobile.PhotoActivity" />
-25-->C:\Users\Dan Krupa\Dropbox\UNI\VSB\VSB\BC_IVT_III\S5\TAMZII\Project\app\src\main\AndroidManifest.xml:14:9-60
-25-->C:\Users\Dan Krupa\Dropbox\UNI\VSB\VSB\BC_IVT_III\S5\TAMZII\Project\app\src\main\AndroidManifest.xml:14:19-48
-26        <activity android:name="com.example.registerprojectmobile.RegisterActivity" />
-26-->C:\Users\Dan Krupa\Dropbox\UNI\VSB\VSB\BC_IVT_III\S5\TAMZII\Project\app\src\main\AndroidManifest.xml:15:9-54
-26-->C:\Users\Dan Krupa\Dropbox\UNI\VSB\VSB\BC_IVT_III\S5\TAMZII\Project\app\src\main\AndroidManifest.xml:15:19-51
-27        <activity android:name="com.example.registerprojectmobile.ChildListActivity" />
-27-->C:\Users\Dan Krupa\Dropbox\UNI\VSB\VSB\BC_IVT_III\S5\TAMZII\Project\app\src\main\AndroidManifest.xml:16:9-55
-27-->C:\Users\Dan Krupa\Dropbox\UNI\VSB\VSB\BC_IVT_III\S5\TAMZII\Project\app\src\main\AndroidManifest.xml:16:19-52
-28        <activity android:name="com.example.registerprojectmobile.MainActivity" >
-28-->C:\Users\Dan Krupa\Dropbox\UNI\VSB\VSB\BC_IVT_III\S5\TAMZII\Project\app\src\main\AndroidManifest.xml:18:9-24:20
-28-->C:\Users\Dan Krupa\Dropbox\UNI\VSB\VSB\BC_IVT_III\S5\TAMZII\Project\app\src\main\AndroidManifest.xml:18:19-47
-29            <intent-filter>
-29-->C:\Users\Dan Krupa\Dropbox\UNI\VSB\VSB\BC_IVT_III\S5\TAMZII\Project\app\src\main\AndroidManifest.xml:19:13-23:29
-30                <action android:name="android.intent.action.MAIN" />
-30-->C:\Users\Dan Krupa\Dropbox\UNI\VSB\VSB\BC_IVT_III\S5\TAMZII\Project\app\src\main\AndroidManifest.xml:20:17-69
-30-->C:\Users\Dan Krupa\Dropbox\UNI\VSB\VSB\BC_IVT_III\S5\TAMZII\Project\app\src\main\AndroidManifest.xml:20:25-66
-31
-32                <category android:name="android.intent.category.LAUNCHER" />
-32-->C:\Users\Dan Krupa\Dropbox\UNI\VSB\VSB\BC_IVT_III\S5\TAMZII\Project\app\src\main\AndroidManifest.xml:22:17-77
-32-->C:\Users\Dan Krupa\Dropbox\UNI\VSB\VSB\BC_IVT_III\S5\TAMZII\Project\app\src\main\AndroidManifest.xml:22:27-74
-33            </intent-filter>
-34        </activity>
-35    </application>
-36
-37</manifest>
+23        android:theme="@style/AppTheme" >
+23-->C:\Users\Dan Krupa\Dropbox\UNI\VSB\VSB\BC_IVT_III\S5\TAMZII\Project\app\src\main\AndroidManifest.xml:13:9-40
+24        <activity android:name="com.example.registerprojectmobile.PhotoActivity" />
+24-->C:\Users\Dan Krupa\Dropbox\UNI\VSB\VSB\BC_IVT_III\S5\TAMZII\Project\app\src\main\AndroidManifest.xml:14:9-60
+24-->C:\Users\Dan Krupa\Dropbox\UNI\VSB\VSB\BC_IVT_III\S5\TAMZII\Project\app\src\main\AndroidManifest.xml:14:19-48
+25        <activity android:name="com.example.registerprojectmobile.RegisterActivity" />
+25-->C:\Users\Dan Krupa\Dropbox\UNI\VSB\VSB\BC_IVT_III\S5\TAMZII\Project\app\src\main\AndroidManifest.xml:15:9-54
+25-->C:\Users\Dan Krupa\Dropbox\UNI\VSB\VSB\BC_IVT_III\S5\TAMZII\Project\app\src\main\AndroidManifest.xml:15:19-51
+26        <activity android:name="com.example.registerprojectmobile.ChildListActivity" />
+26-->C:\Users\Dan Krupa\Dropbox\UNI\VSB\VSB\BC_IVT_III\S5\TAMZII\Project\app\src\main\AndroidManifest.xml:16:9-55
+26-->C:\Users\Dan Krupa\Dropbox\UNI\VSB\VSB\BC_IVT_III\S5\TAMZII\Project\app\src\main\AndroidManifest.xml:16:19-52
+27        <activity android:name="com.example.registerprojectmobile.MainActivity" >
+27-->C:\Users\Dan Krupa\Dropbox\UNI\VSB\VSB\BC_IVT_III\S5\TAMZII\Project\app\src\main\AndroidManifest.xml:18:9-24:20
+27-->C:\Users\Dan Krupa\Dropbox\UNI\VSB\VSB\BC_IVT_III\S5\TAMZII\Project\app\src\main\AndroidManifest.xml:18:19-47
+28            <intent-filter>
+28-->C:\Users\Dan Krupa\Dropbox\UNI\VSB\VSB\BC_IVT_III\S5\TAMZII\Project\app\src\main\AndroidManifest.xml:19:13-23:29
+29                <action android:name="android.intent.action.MAIN" />
+29-->C:\Users\Dan Krupa\Dropbox\UNI\VSB\VSB\BC_IVT_III\S5\TAMZII\Project\app\src\main\AndroidManifest.xml:20:17-69
+29-->C:\Users\Dan Krupa\Dropbox\UNI\VSB\VSB\BC_IVT_III\S5\TAMZII\Project\app\src\main\AndroidManifest.xml:20:25-66
+30
+31                <category android:name="android.intent.category.LAUNCHER" />
+31-->C:\Users\Dan Krupa\Dropbox\UNI\VSB\VSB\BC_IVT_III\S5\TAMZII\Project\app\src\main\AndroidManifest.xml:22:17-77
+31-->C:\Users\Dan Krupa\Dropbox\UNI\VSB\VSB\BC_IVT_III\S5\TAMZII\Project\app\src\main\AndroidManifest.xml:22:27-74
+32            </intent-filter>
+33        </activity>
+34    </application>
+35
+36</manifest>

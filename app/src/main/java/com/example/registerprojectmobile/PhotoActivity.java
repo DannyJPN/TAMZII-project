@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.provider.BaseColumns;
 import android.provider.MediaStore;
@@ -33,8 +35,18 @@ public class PhotoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_photo);
+        final ImageView img_photo = (ImageView)findViewById(R.id.img_childphoto);
+       final Drawable def = img_photo.getDrawable();
 
-       Button finalsaver = (Button)findViewById(R.id.btn_savefinal);
+       Button photoloader = (Button)findViewById(R.id.btn_loadphoto);
+       photoloader.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               AddPhoto();
+           }
+       });
+
+        Button finalsaver = (Button)findViewById(R.id.btn_savefinal);
         finalsaver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,7 +59,17 @@ public class PhotoActivity extends AppCompatActivity {
                     regchild.setName(input.getExtras().getString("Name"));
                     regchild.setSurname(input.getExtras().getString("Surname"));
                     regchild.setInsuranceNumber(input.getExtras().getInt("InsuranceCompany"));
-                    AddPhoto();
+                    Drawable d = img_photo.getDrawable();
+                    if(((BitmapDrawable)d).getBitmap().equals(((BitmapDrawable)def).getBitmap()))
+                    {
+                        regchild.setPhoto(((BitmapDrawable)d).getBitmap());
+
+                    }
+                    else
+                        {
+
+                            AddPhoto();
+                        }
                     GetGroupID();
                     SaveChild(regchild);
                 }

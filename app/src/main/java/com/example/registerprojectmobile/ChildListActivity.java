@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.provider.BaseColumns;
 import android.view.View;
@@ -15,7 +16,7 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.ArrayList;
-import java.util.Date;
+import java.sql.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -59,12 +60,31 @@ public class ChildListActivity extends AppCompatActivity {
 
 
         };
-
         String selection = SQLmanagerContract.ChildEntry.COLUMN_NAME_NAME +
                 " = ? and "+SQLmanagerContract.ChildEntry.COLUMN_NAME_SURNAME + " = ?";
         String[] selectionArgs = {name,surname };
+
+        if(surname.equals("") && !name.equals(""))
+        {
+            selection = SQLmanagerContract.ChildEntry.COLUMN_NAME_NAME +
+                    " = ?";
+            selectionArgs= new String[]{name};
+        }
+        else if(name.equals("")&&!surname.equals(""))
+        {
+            selection = SQLmanagerContract.ChildEntry.COLUMN_NAME_SURNAME +
+                    " = ?";
+            selectionArgs= new String[]{surname};
+        }
+        else if (surname.equals("")&& name.equals(""))
+        {
+
+            return;
+        }
+
+
         Cursor cursor = db.query(
-                SQLmanagerContract.GroupEntry.TABLE_NAME,   // The table to query
+                SQLmanagerContract.ChildEntry.TABLE_NAME,   // The table to query
                 projection,             // The array of columns to return (pass null to get all)
                 selection,              // The columns for the WHERE clause
                 selectionArgs,          // The values for the WHERE clause
@@ -79,18 +99,32 @@ public class ChildListActivity extends AppCompatActivity {
             int ID = cursor.getInt(cursor.getColumnIndexOrThrow(SQLmanagerContract.ChildEntry._ID));
             String Name = cursor.getString(cursor.getColumnIndexOrThrow(SQLmanagerContract.ChildEntry.COLUMN_NAME_NAME));
             String Surname = cursor.getString(cursor.getColumnIndexOrThrow(SQLmanagerContract.ChildEntry.COLUMN_NAME_SURNAME));
-            //Date BirthDate = Date.valueOf( cursor.getString(cursor.getColumnIndexOrThrow(SQLmanagerContract.ChildEntry.COLUMN_NAME_BIRTHDATE)));
+            Date BirthDate = Date.valueOf( cursor.getString(cursor.getColumnIndexOrThrow(SQLmanagerContract.ChildEntry.COLUMN_NAME_BIRTHDATE)));
             int RegNum = cursor.getInt(cursor.getColumnIndexOrThrow(SQLmanagerContract.ChildEntry.COLUMN_NAME_REGNUM));
-           // Bitmap Photo = cursor.getBlob(cursor.getColumnIndexOrThrow(SQLmanagerContract.ChildEntry.COLUMN_NAME_PHOTO));
+            Bitmap Photo = convertByteArrayToBitmap( cursor.getBlob(cursor.getColumnIndexOrThrow(SQLmanagerContract.ChildEntry.COLUMN_NAME_PHOTO)));
             int GroupID = cursor.getInt(cursor.getColumnIndexOrThrow(SQLmanagerContract.ChildEntry.COLUMN_NAME_GROUPID));
             int InsuranceNumber = cursor.getInt(cursor.getColumnIndexOrThrow(SQLmanagerContract.ChildEntry.COLUMN_NAME_INSURANCENUMBER));
 
+            searchild.setID(ID);
+            searchild.setName(Name);
+            searchild.setSurname(Surname);
+            searchild.setBirthDate(BirthDate);
+            searchild.setRegNum(RegNum);
+            searchild.setPhoto(Photo);
+            searchild.setGroupID(GroupID);
+            searchild.setInsuranceNumber(InsuranceNumber);
+
+            items.add(searchild);
         }
         cursor.close();
 
+        FillList(items);
+
 
     }
-
+    private Bitmap convertByteArrayToBitmap(byte[] blob) {
+        return BitmapFactory.decodeByteArray(blob, 0, blob.length);
+    }
     private void FillList(List<Child>children)
     {
               final List<String> lisviewstrings = new ArrayList<>();

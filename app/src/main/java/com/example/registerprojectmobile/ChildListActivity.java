@@ -11,24 +11,38 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.provider.BaseColumns;
 import android.view.View;
+<<<<<<< HEAD
 import android.widget.AdapterView;
+=======
+>>>>>>> 0e8c936a63e80ca7fdcaa023308076a13587daa7
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+<<<<<<< HEAD
 import java.io.ByteArrayOutputStream;
+=======
+>>>>>>> 0e8c936a63e80ca7fdcaa023308076a13587daa7
 import java.util.ArrayList;
 import java.sql.Date;
 import java.util.HashMap;
 import java.util.List;
 
 public class ChildListActivity extends AppCompatActivity {
+<<<<<<< HEAD
 List<Child> children ;
+=======
+
+>>>>>>> 0e8c936a63e80ca7fdcaa023308076a13587daa7
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_child_list);
+<<<<<<< HEAD
 children = new ArrayList<>();
+=======
+
+>>>>>>> 0e8c936a63e80ca7fdcaa023308076a13587daa7
         Intent searchdata = getIntent();
         if(searchdata.getExtras().getString("OriginActivity").equals("ChildSearch"))
         {
@@ -39,6 +53,7 @@ children = new ArrayList<>();
 
 
         }
+<<<<<<< HEAD
         ListView listview = (ListView) findViewById(R.id.listview);
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -68,15 +83,22 @@ children = new ArrayList<>();
             }
 
         });
+=======
+
+
+>>>>>>> 0e8c936a63e80ca7fdcaa023308076a13587daa7
 
 
 
     }
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> 0e8c936a63e80ca7fdcaa023308076a13587daa7
     private void Search(String name,String surname) {
 
   SQLmanager regman = new SQLmanager(          getApplicationContext()  );
@@ -115,8 +137,12 @@ children = new ArrayList<>();
             return;
         }
 
+<<<<<<< HEAD
         String sortOrder =
                 SQLmanagerContract.ChildEntry._ID;
+=======
+
+>>>>>>> 0e8c936a63e80ca7fdcaa023308076a13587daa7
         Cursor cursor = db.query(
                 SQLmanagerContract.ChildEntry.TABLE_NAME,   // The table to query
                 projection,             // The array of columns to return (pass null to get all)
@@ -124,10 +150,17 @@ children = new ArrayList<>();
                 selectionArgs,          // The values for the WHERE clause
                 null,                   // don't group the rows
                 null,                   // don't filter by row groups
+<<<<<<< HEAD
                 sortOrder            // The sort order
         );
 
         
+=======
+                null              // The sort order
+        );
+
+        List<Child> items = new ArrayList<>();
+>>>>>>> 0e8c936a63e80ca7fdcaa023308076a13587daa7
         while(cursor.moveToNext()) {
             Child searchild = new Child();
             int ID = cursor.getInt(cursor.getColumnIndexOrThrow(SQLmanagerContract.ChildEntry._ID));
@@ -148,11 +181,19 @@ children = new ArrayList<>();
             searchild.setGroupID(GroupID);
             searchild.setInsuranceNumber(InsuranceNumber);
 
+<<<<<<< HEAD
             children.add(searchild);
         }
         cursor.close();
 
         FillList(children);
+=======
+            items.add(searchild);
+        }
+        cursor.close();
+
+        FillList(items);
+>>>>>>> 0e8c936a63e80ca7fdcaa023308076a13587daa7
 
 
     }
@@ -174,8 +215,11 @@ children = new ArrayList<>();
 
     }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 0e8c936a63e80ca7fdcaa023308076a13587daa7
     private class StableArrayAdapter extends ArrayAdapter<String> {
 
         HashMap<String, Integer> mIdMap = new HashMap<String, Integer>();

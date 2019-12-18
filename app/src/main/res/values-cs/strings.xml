@@ -41,5 +41,8 @@
     <string name="tv_childsearch">Vyhledat dítě</string>
     <string name="tv_childnamesearch">Jméno</string>
     <string name="tv_childsurnamesearch">Příjmení</string>
+<<<<<<< HEAD
     <string name="blank">\"\"</string>
+=======
+>>>>>>> 0e8c936a63e80ca7fdcaa023308076a13587daa7
 </resources>

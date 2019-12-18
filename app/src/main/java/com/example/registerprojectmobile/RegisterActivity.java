@@ -66,11 +66,13 @@ created=true;
                 Date date = (Date) new Date
                         (dp_birthdate.getYear(), dp_birthdate.getMonth(), dp_birthdate.getDayOfMonth());
                 Date BirthDate =date;
-                Integer InsuranceNumber=Integer.parseInt(tb_insurcompany.getText().toString());
+                String insur = tb_insurcompany.getText().toString();
+                Integer InsuranceNumber=insur.equals("")?0:Integer.parseInt(insur);
 
                 String Name=tb_childname.getText().toString();
                 String Surname=tb_childsurname.getText().toString();
-                Integer RegNum=Integer.parseInt(tb_regnum.getText().toString());
+                String regnumstr = tb_regnum.getText().toString();
+                Integer RegNum=regnumstr.equals("")?0:Integer.parseInt(regnumstr);
 
                 Intent photoact = new Intent(getApplicationContext(), PhotoActivity.class);
                 photoact.putExtra("Name",Name);

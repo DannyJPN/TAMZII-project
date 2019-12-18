@@ -24,26 +24,26 @@
         <TextView
             android:id="@+id/tv_childname"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="15dp"
             android:text="@string/tv_childname" />
 
         <EditText
             android:id="@+id/tb_childname"
             android:layout_width="match_parent"
-            android:layout_height="33dp"
+            android:layout_height="37dp"
             android:ems="10"
             android:inputType="textPersonName" />
 
         <TextView
             android:id="@+id/tv_childsurname"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="15dp"
             android:text="@string/tv_childsurname" />
 
         <EditText
             android:id="@+id/tb_childsurname"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="37dp"
             android:ems="10"
             android:inputType="textPersonName"
             />
@@ -51,13 +51,13 @@
         <TextView
             android:id="@+id/tv_regnum"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="15dp"
             android:text="@string/tv_regnum" />
 
         <EditText
             android:id="@+id/tb_regnum"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="37dp"
             android:ems="10"
             android:inputType="number"
             />
@@ -66,26 +66,24 @@
         <TextView
             android:id="@+id/tv_insurcompany"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_height="15dp"
             android:text="@string/tv_insurcompany" />
 
         <EditText
             android:id="@+id/tb_insurcompany"
             android:layout_width="match_parent"
-            android:layout_height="22dp"
-            android:layout_weight="1"
+            android:layout_height="37dp"
             android:inputType="number" />
         <TextView
             android:id="@+id/tv_birthdate"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="15dp"
             android:text="@string/tv_birthdate" />
 
         <DatePicker
             android:id="@+id/dp_birthdate"
             android:layout_width="match_parent"
-            android:layout_height="360dp"
+            android:layout_height="330dp"
             android:layout_weight="1" />
 
         <Button

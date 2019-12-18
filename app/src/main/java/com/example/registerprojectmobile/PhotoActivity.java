@@ -51,16 +51,18 @@ public class PhotoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent input = getIntent();
-                if(input.getExtras().getString("OriginActivity") == "Register")
+                String origin =input.getExtras().getString("OriginActivity");
+                if( origin.equals( "Register"))
                 {
                     regchild =new Child();
-                    regchild.setBirthDate(Date.valueOf(input.getExtras().getString("BirthDate")));
+                    String date=input.getExtras().getString("BirthDate");
+                    regchild.setBirthDate(Date.valueOf(date));
                     regchild.setRegNum(input.getExtras().getInt("RegNum"));
                     regchild.setName(input.getExtras().getString("Name"));
                     regchild.setSurname(input.getExtras().getString("Surname"));
                     regchild.setInsuranceNumber(input.getExtras().getInt("InsuranceCompany"));
                     Drawable d = img_photo.getDrawable();
-                    if(((BitmapDrawable)d).getBitmap().equals(((BitmapDrawable)def).getBitmap()))
+                    if(((BitmapDrawable)d).getBitmap()!=null)
                     {
                         regchild.setPhoto(((BitmapDrawable)d).getBitmap());
 
@@ -72,6 +74,9 @@ public class PhotoActivity extends AppCompatActivity {
                         }
                     GetGroupID();
                     SaveChild(regchild);
+                    Intent searcher = new Intent(getApplicationContext(),ChildSearchActivity.class);
+                    searcher.putExtra("OriginActivity","Photo");
+                    startActivity(searcher);
                 }
             }
         });

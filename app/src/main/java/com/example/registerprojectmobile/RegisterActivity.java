@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -37,16 +38,16 @@ public class RegisterActivity extends AppCompatActivity {
                 Date date = (Date) new Date
                         (dp_birthdate.getYear(), dp_birthdate.getMonth(), dp_birthdate.getDayOfMonth());
                 Date BirthDate =date;
-                Integer InsuranceNumber=Integer.getInteger(tb_insurcompany.getText().toString());
+                Integer InsuranceNumber=Integer.parseInt(tb_insurcompany.getText().toString());
 
                 String Name=tb_childname.getText().toString();
                 String Surname=tb_childsurname.getText().toString();
-                Integer RegNum=Integer.getInteger(tb_regnum.getText().toString());
+                Integer RegNum=Integer.parseInt(tb_regnum.getText().toString());
 
                 Intent photoact = new Intent(getApplicationContext(), PhotoActivity.class);
                 photoact.putExtra("Name",Name);
                 photoact.putExtra("Surname",Surname);
-                photoact.putExtra("BirthDate",BirthDate.toString());
+                photoact.putExtra("BirthDate", GetISODate(BirthDate));
                 photoact.putExtra("RegNum",RegNum);
                 photoact.putExtra("InsuranceNumber",InsuranceNumber);
                 photoact.putExtra("OriginActivity","Register");
@@ -56,6 +57,35 @@ public class RegisterActivity extends AppCompatActivity {
         });
         tb_regnum.setInputType(InputType.TYPE_CLASS_NUMBER);
         tb_insurcompany.setInputType(InputType.TYPE_CLASS_NUMBER);
+
+    }
+
+    private String GetISODate(Date birthDate) {
+        StringBuilder sb = new StringBuilder();
+        sb.append(birthDate.getYear());
+        sb.append("-");
+        String month =String.valueOf(birthDate.getMonth());
+        if(birthDate.getMonth()<10)
+        {
+            month="0"+month;
+        }
+        sb.append(month);
+        sb.append("-");
+        String day =String.valueOf(birthDate.getDay());
+        if(birthDate.getDay()<10)
+        {
+            day="0"+day;
+        }
+        sb.append(day);
+
+       // sb.append(" 00:00:00.000");
+
+
+        
+        return sb.toString();
+        
+        
+        
 
     }
 

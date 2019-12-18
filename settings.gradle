@@ -1,7 +1,2 @@
-<<<<<<< HEAD
 include ':app'
 rootProject.name='RegisterProjectMobile'
-=======
-include ':app'
-rootProject.name='RegisterProjectMobile'
->>>>>>> 0e8c936a63e80ca7fdcaa023308076a13587daa7

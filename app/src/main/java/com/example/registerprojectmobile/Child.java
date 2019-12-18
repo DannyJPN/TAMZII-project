@@ -36,7 +36,6 @@ public void setID(int id){ID=id;}
 public void setPhoto(Bitmap b){Photo=b;}
 
 
-<<<<<<< HEAD
     public static String GetISODate(Date birthDate) {
         StringBuilder sb = new StringBuilder();
         sb.append(birthDate.getYear());
@@ -65,6 +64,4 @@ public void setPhoto(Bitmap b){Photo=b;}
 
 
     }
-=======
->>>>>>> 0e8c936a63e80ca7fdcaa023308076a13587daa7
 }

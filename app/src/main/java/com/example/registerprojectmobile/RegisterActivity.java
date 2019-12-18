@@ -3,10 +3,7 @@ package com.example.registerprojectmobile;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
-<<<<<<< HEAD
 import android.content.Context;
-=======
->>>>>>> 0e8c936a63e80ca7fdcaa023308076a13587daa7
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -17,29 +14,21 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 
-<<<<<<< HEAD
 import java.io.BufferedReader;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-=======
->>>>>>> 0e8c936a63e80ca7fdcaa023308076a13587daa7
 import java.time.LocalDateTime;
 import java.util.Date;
 
 public class RegisterActivity extends AppCompatActivity {
 
-<<<<<<< HEAD
 Boolean created = false;
-=======
-
->>>>>>> 0e8c936a63e80ca7fdcaa023308076a13587daa7
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-<<<<<<< HEAD
 created=true;
         try{
 
@@ -65,11 +54,6 @@ created=true;
             e.printStackTrace();
         }
 
-=======
-
-
-
->>>>>>> 0e8c936a63e80ca7fdcaa023308076a13587daa7
         final EditText tb_childname = (EditText) findViewById(R.id.tb_childname);
         final EditText tb_childsurname = (EditText) findViewById(R.id.tb_childsurname);
         final EditText tb_regnum = (EditText) findViewById(R.id.tb_regnum);
@@ -91,11 +75,7 @@ created=true;
                 Intent photoact = new Intent(getApplicationContext(), PhotoActivity.class);
                 photoact.putExtra("Name",Name);
                 photoact.putExtra("Surname",Surname);
-<<<<<<< HEAD
                 photoact.putExtra("BirthDate", Child.GetISODate(BirthDate));
-=======
-                photoact.putExtra("BirthDate", GetISODate(BirthDate));
->>>>>>> 0e8c936a63e80ca7fdcaa023308076a13587daa7
                 photoact.putExtra("RegNum",RegNum);
                 photoact.putExtra("InsuranceNumber",InsuranceNumber);
                 photoact.putExtra("OriginActivity","Register");
@@ -103,7 +83,6 @@ created=true;
                 startActivity(photoact);
             }
         });
-<<<<<<< HEAD
 
     }
 
@@ -179,41 +158,6 @@ if(((line=d.readLine()) !=null)){if(line.split(":")[0]=="RegNum"){ tb_regnum.set
 		
 		
 	}
-=======
-        tb_regnum.setInputType(InputType.TYPE_CLASS_NUMBER);
-        tb_insurcompany.setInputType(InputType.TYPE_CLASS_NUMBER);
-
-    }
-
-    private String GetISODate(Date birthDate) {
-        StringBuilder sb = new StringBuilder();
-        sb.append(birthDate.getYear());
-        sb.append("-");
-        String month =String.valueOf(birthDate.getMonth());
-        if(birthDate.getMonth()<10)
-        {
-            month="0"+month;
-        }
-        sb.append(month);
-        sb.append("-");
-        String day =String.valueOf(birthDate.getDay());
-        if(birthDate.getDay()<10)
-        {
-            day="0"+day;
-        }
-        sb.append(day);
-
-       // sb.append(" 00:00:00.000");
-
-
-        
-        return sb.toString();
-        
-        
-        
-
-    }
->>>>>>> 0e8c936a63e80ca7fdcaa023308076a13587daa7
 
 
 }

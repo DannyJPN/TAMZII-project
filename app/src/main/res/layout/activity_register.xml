@@ -30,16 +30,9 @@
         <EditText
             android:id="@+id/tb_childname"
             android:layout_width="match_parent"
-<<<<<<< HEAD
             android:layout_height="33dp"
             android:ems="10"
             android:inputType="textPersonName" />
-=======
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            />
->>>>>>> 0e8c936a63e80ca7fdcaa023308076a13587daa7
 
         <TextView
             android:id="@+id/tv_childsurname"
@@ -69,7 +62,6 @@
             android:inputType="number"
             />
 
-<<<<<<< HEAD
 
         <TextView
             android:id="@+id/tv_insurcompany"
@@ -84,8 +76,6 @@
             android:layout_height="22dp"
             android:layout_weight="1"
             android:inputType="number" />
-=======
->>>>>>> 0e8c936a63e80ca7fdcaa023308076a13587daa7
         <TextView
             android:id="@+id/tv_birthdate"
             android:layout_width="match_parent"
@@ -95,7 +85,6 @@
         <DatePicker
             android:id="@+id/dp_birthdate"
             android:layout_width="match_parent"
-<<<<<<< HEAD
             android:layout_height="360dp"
             android:layout_weight="1" />
 
@@ -105,28 +94,6 @@
             android:layout_height="11dp"
             android:layout_weight="1"
             android:text="@string/b_savetext" />
-=======
-            android:layout_height="246dp"
-            android:layout_weight="1" />
-
-        <TextView android:id="@+id/tv_insurcompany"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/tv_insurcompany" />
-
-        <EditText android:id="@+id/tb_insurcompany"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:inputType="number"/>
-
-        <Button android:id="@+id/btn_save"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/b_savetext"/>
->>>>>>> 0e8c936a63e80ca7fdcaa023308076a13587daa7
 
 
 

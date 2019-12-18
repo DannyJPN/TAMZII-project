@@ -30,20 +30,14 @@ import static com.example.registerprojectmobile.SQLmanagerContract.ChildEntry.CO
 
 public class PhotoActivity extends AppCompatActivity {
     private final int REQUEST_IMAGE_CAPTURE=1;
-<<<<<<< HEAD
 	Boolean photoloaded = false;
 	Boolean created= false;
-=======
->>>>>>> 0e8c936a63e80ca7fdcaa023308076a13587daa7
     private Child regchild=new Child();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_photo);
-<<<<<<< HEAD
         created=true;
-=======
->>>>>>> 0e8c936a63e80ca7fdcaa023308076a13587daa7
         final ImageView img_photo = (ImageView)findViewById(R.id.img_childphoto);
        final Drawable def = img_photo.getDrawable();
 
@@ -71,11 +65,7 @@ public class PhotoActivity extends AppCompatActivity {
                     regchild.setSurname(input.getExtras().getString("Surname"));
                     regchild.setInsuranceNumber(input.getExtras().getInt("InsuranceCompany"));
                     Drawable d = img_photo.getDrawable();
-<<<<<<< HEAD
                     if(photoloaded)
-=======
-                    if(((BitmapDrawable)d).getBitmap()!=null)
->>>>>>> 0e8c936a63e80ca7fdcaa023308076a13587daa7
                     {
                         regchild.setPhoto(((BitmapDrawable)d).getBitmap());
 
@@ -122,10 +112,7 @@ public class PhotoActivity extends AppCompatActivity {
         );
         if(cursor==null||cursor.getCount()<=0)
         {
-<<<<<<< HEAD
             cursor.close();
-=======
->>>>>>> 0e8c936a63e80ca7fdcaa023308076a13587daa7
             regchild.setGroupID(0);
         }
         else
@@ -133,11 +120,7 @@ public class PhotoActivity extends AppCompatActivity {
             cursor.moveToNext();
             int groupid = cursor.getInt(cursor.getColumnIndexOrThrow(SQLmanagerContract.GroupEntry._ID));
             regchild.setGroupID(groupid);
-<<<<<<< HEAD
 cursor.close();
-=======
-
->>>>>>> 0e8c936a63e80ca7fdcaa023308076a13587daa7
         }
 
     }
@@ -176,10 +159,7 @@ SQLmanager regman = new SQLmanager(getApplicationContext());
             ImageView img_photo = (ImageView)findViewById(R.id.img_childphoto);
             img_photo.setImageBitmap(photo);
             regchild.setPhoto(photo);
-<<<<<<< HEAD
 			photoloaded=true;
-=======
->>>>>>> 0e8c936a63e80ca7fdcaa023308076a13587daa7
         }
     }
 

@@ -12,7 +12,7 @@ import android.provider.BaseColumns;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.sql.Date;
+
 
 public class DetailDisplayActivity extends AppCompatActivity {
 
@@ -33,19 +33,28 @@ public class DetailDisplayActivity extends AppCompatActivity {
         final ImageView img_photo = (ImageView) findViewById(R.id.img_photodisplay);
 
         Intent setter = getIntent();
-        if (setter.getExtras().getString("OriginActivity").equals("ChildList")) {
-            tb_childname.setText(setter.getExtras().getString("Name"));
-            tb_childsurname.setText(setter.getExtras().getString("Surname"));
-            tb_birthday.setText(setter.getExtras().getString("BirthDate"));
-            tb_regnum.setText(setter.getExtras().getInt("RegNum"));
-            tb_insurcompany.setText(setter.getExtras().getInt("InsuranceNumber"));
+        if (setter.getExtras().getString("OriginActivity").equals("ChildList"))
+        {
+
+            String Name=setter.getExtras().getString("Name");
+
+            String Surname=setter.getExtras().getString("Surname");
+            String BirthDate=setter.getExtras().getString("BirthDate");
+            String Regnum=String.valueOf(setter.getExtras().getInt("RegNum"));
+            String Insurnum=String.valueOf(setter.getExtras().getInt("InsuranceNumber"));
+
+            tb_childname.setText("Jméno: "+Name);
+            tb_childsurname.setText("Příjmení: "+Surname);
+            tb_birthday.setText("Datum narození: "+BirthDate);
+            tb_regnum.setText("Registrační číslo: "+Regnum);
+            tb_insurcompany.setText("Číslo pojišťovny: "+Insurnum);
 
             byte[] byteArray = setter.getExtras().getByteArray("Photo");
             Bitmap photo = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
             img_photo.setImageBitmap(photo);
             int groupid=setter.getExtras().getInt("GroupID");
             String groupname = GetGroupName(groupid);
-            tb_groupname.setText(groupname);
+            tb_groupname.setText("Kroužek: "+groupname);
 
         }
 

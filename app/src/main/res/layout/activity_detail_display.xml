@@ -7,8 +7,8 @@
     tools:context=".DetailDisplayActivity">
 
     <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_width="401dp"
+        android:layout_height="616dp"
         android:layout_marginStart="1dp"
         android:layout_marginLeft="1dp"
         android:layout_marginTop="1dp"
@@ -25,43 +25,43 @@
         <TextView
             android:id="@+id/tb_childnamedisplay"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:text="@string/blank" />
 
         <TextView
             android:id="@+id/tb_childsurnamedisplay"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:text="@string/blank" />
 
         <TextView
             android:id="@+id/tb_childregnumdisplay"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:text="@string/blank" />
 
         <TextView
             android:id="@+id/tb_groupnamedisplay"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:text="@string/blank" />
 
         <TextView
             android:id="@+id/tb_childinsuranccompanydisplay"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:text="@string/blank" />
 
         <TextView
             android:id="@+id/tb_childbirthdatedisplay"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:text="@string/blank" />
 
         <ImageView
             android:id="@+id/img_photodisplay"
-            android:layout_width="match_parent"
-            android:layout_height="408dp"
+            android:layout_width="349dp"
+            android:layout_height="342dp"
             app:srcCompat="@mipmap/ic_launcher" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

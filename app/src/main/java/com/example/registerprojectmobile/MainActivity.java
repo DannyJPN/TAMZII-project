@@ -43,12 +43,12 @@ SQLmanager regman = new SQLmanager(getApplicationContext());
 SQLiteDatabase db = regman.getWritableDatabase();
         Group[] groups = new Group[]
                 {
-                        new Group(1,"vaření"),
+                        new Group(1,"vareni"),
                         new Group(2,"keramika"),
-                        new Group(3,"zpěv"),
-                        new Group(4,"hra na flétnu"),
+                        new Group(3,"zpev"),
+                        new Group(4,"hra na fletnu"),
                         new Group(5,"hra na kytaru"),
-                        new Group(6,"elektrotechnický kroužek"),
+                        new Group(6,"elektrotechnicky krouzek"),
                         new Group(7,"florbal")
 
 

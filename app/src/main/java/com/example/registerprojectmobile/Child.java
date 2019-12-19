@@ -2,14 +2,14 @@ package com.example.registerprojectmobile;
 
 import android.graphics.Bitmap;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Child 
 {
 
 private String Name="";
 private String Surname="";
-private Date BirthDate=new Date();
+private Date BirthDate=new Date(1900,1,1);
 private int RegNum=0;
 
 private int InsuranceNumber=0;
@@ -37,6 +37,8 @@ public void setPhoto(Bitmap b){Photo=b;}
 
 
     public static String GetISODate(Date birthDate) {
+
+
         StringBuilder sb = new StringBuilder();
         sb.append(birthDate.getYear());
         sb.append("-");

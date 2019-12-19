@@ -77,7 +77,7 @@
                 android:id="@+id/tb_insurcompany"
                 android:layout_width="match_parent"
                 android:layout_height="22dp"
-                android:layout_weight="1"
+
                 android:inputType="number" />
 
             <Button

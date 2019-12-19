@@ -64,7 +64,7 @@ public class PhotoActivity extends AppCompatActivity {
                     regchild.setRegNum(input.getExtras().getInt("RegNum"));
                     regchild.setName(input.getExtras().getString("Name"));
                     regchild.setSurname(input.getExtras().getString("Surname"));
-                    regchild.setInsuranceNumber(input.getExtras().getInt("InsuranceCompany"));
+                    regchild.setInsuranceNumber(input.getExtras().getInt("InsuranceNumber"));
                     Drawable d = img_photo.getDrawable();
                     if(photoloaded)
                     {
@@ -115,7 +115,6 @@ public class PhotoActivity extends AppCompatActivity {
         );
         if(cursor==null||cursor.getCount()<=0)
         {
-            cursor.close();
             regchild.setGroupID(0);
         }
         else
@@ -123,8 +122,9 @@ public class PhotoActivity extends AppCompatActivity {
             cursor.moveToNext();
             int groupid = cursor.getInt(cursor.getColumnIndexOrThrow(SQLmanagerContract.GroupEntry._ID));
             regchild.setGroupID(groupid);
-cursor.close();
+
         }
+        cursor.close();
 
     }
 

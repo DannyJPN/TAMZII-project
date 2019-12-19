@@ -21,7 +21,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.time.LocalDateTime;
-import java.util.Date;
+import java.sql.Date;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -71,19 +71,19 @@ public class RegisterActivity extends AppCompatActivity {
                 String regnumstr = tb_regnum.getText().toString();
                 String insur = tb_insurcompany.getText().toString();
                 if (Name.equals("")) {
-                    Toast.makeText(getApplicationContext(), "Vyplňte jméno", Toast.LENGTH_LONG);
+                    Toast.makeText(getApplicationContext(), "Vyplňte jméno", Toast.LENGTH_LONG).show();
                     return;
                 }
                 if (Surname.equals("")) {
-                    Toast.makeText(getApplicationContext(), "Vyplňte příjmení", Toast.LENGTH_LONG);
+                    Toast.makeText(getApplicationContext(), "Vyplňte příjmení", Toast.LENGTH_LONG).show();
                     return;
                 }
                 if (regnumstr.equals("")) {
-                    Toast.makeText(getApplicationContext(), "Vyplňte registrační číslo", Toast.LENGTH_LONG);
+                    Toast.makeText(getApplicationContext(), "Vyplňte registrační číslo", Toast.LENGTH_LONG).show();
                     return;
                 }
                 if (insur.equals("")) {
-                    Toast.makeText(getApplicationContext(), "Vyplňte číslo pojišťovny", Toast.LENGTH_LONG);
+                    Toast.makeText(getApplicationContext(), "Vyplňte číslo pojišťovny", Toast.LENGTH_LONG).show();
                     return;
                 }
 

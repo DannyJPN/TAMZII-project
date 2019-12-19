@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
 import java.sql.Date;
@@ -73,7 +74,9 @@ public class PhotoActivity extends AppCompatActivity {
                     else
                         {
 
-                            AddPhoto();
+                            //AddPhoto();
+                            Toast.makeText(getApplicationContext(),"Nahrajte fotografii",Toast.LENGTH_SHORT).show();
+                            return;
                         }
                     GetGroupID();
                     SaveChild(regchild);

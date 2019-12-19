@@ -30,7 +30,7 @@
         <EditText
             android:id="@+id/tb_childname"
             android:layout_width="match_parent"
-            android:layout_height="37dp"
+            android:layout_height="39dp"
             android:ems="10"
             android:inputType="textPersonName" />
 
@@ -43,7 +43,7 @@
         <EditText
             android:id="@+id/tb_childsurname"
             android:layout_width="match_parent"
-            android:layout_height="37dp"
+            android:layout_height="39dp"
             android:ems="10"
             android:inputType="textPersonName"
             />
@@ -57,7 +57,7 @@
         <EditText
             android:id="@+id/tb_regnum"
             android:layout_width="match_parent"
-            android:layout_height="37dp"
+            android:layout_height="39dp"
             android:ems="10"
             android:inputType="number"
             />
@@ -72,7 +72,7 @@
         <EditText
             android:id="@+id/tb_insurcompany"
             android:layout_width="match_parent"
-            android:layout_height="37dp"
+            android:layout_height="39dp"
             android:inputType="number" />
         <TextView
             android:id="@+id/tv_birthdate"
@@ -83,7 +83,7 @@
         <DatePicker
             android:id="@+id/dp_birthdate"
             android:layout_width="match_parent"
-            android:layout_height="330dp"
+            android:layout_height="310dp"
             android:layout_weight="1" />
 
         <Button
